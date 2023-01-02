@@ -1,12 +1,125 @@
-.header{
-    background: #FFC94B;
-    &__wrapper  {
-        max-width: 1686px;
-        padding-top: 71px;
-    }
-}
-.container  {
-    max-width: 1440px;
-    min-width: 320px;
+.header {
+  background: #ffc94b;
+  &__wrapper {
+    max-width: 1686px;
+    padding-top: 71px;
+    padding-bottom: 147px;
     margin: 0 auto;
+    position: relative;
+  }
+}
+.title {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  position: relative;
+  padding-left: 324px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 355px;
+    height: 0px;
+    border: 1px solid #ffc94b;
+    top: 50%;
+    left: 0;
+  }
+}
+.container {
+  max-width: 1440px;
+  min-width: 320px;
+}
+.promo {
+  background: #0e1b1b;
+  border-radius: 50px 50px 0 0;
+  nav {
+    padding: 25px 62px 39px 129px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      :first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__button {
+    width: 50px;
+    height: 50px;
+    background: #ffc94b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      width: 2px;
+      height: 31px;
+      background: #0e1b1b;
+      &:first-child {
+        margin-right: 7px;
+        margin-bottom: 6px;
+      }
+      &:last-child {
+        margin-top: 6px;
+      }
+    }
+  }
+  &__middle {
+    position: relative;
+    padding-bottom: 155px;
+    h2 {
+      color: #ffffff;
+      font-family: "Playfair Display";
+      font-size: 60px;
+      position: relative;
+      z-index: 1;
+      padding: 135px 0 83px 135px;
+      max-width: 364px;
+    }
+    &_btn {
+      p {
+        color: #ffc94b;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        &:first-child{
+          padding-left: 97px;
+          padding-bottom: 32px;
+        }
+        &:last-child{
+          padding-left: 148px;
+        }
+        div {
+          width: 79px;
+          height: 1px;
+          background: #ffc94b;
+          &:first-child{
+            margin-right: 11px;
+          }
+          &:last-child{
+            margin-left: 11px;
+          }
+        }
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    right: 62px;
+  }
+}
+.aside {
+  position: fixed;
+  right: -60px;
+  top:414px;
+  transform: rotate(-90deg);
+  .title {
+    width: fit-content;
+    &::before{
+      border: 1px solid #0E1B1B;
+      width: 637px;
+      left:auto;
+      right: 118px;
+    }
+  }
 }

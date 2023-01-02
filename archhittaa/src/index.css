@@ -1,6 +1,46 @@
 body {
   margin: 0;
-  font-family: 'Open Sans','Playfair Display', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+  text-size-adjust: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+body,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  background: transparent; /*  прозрачность фона */
+  border: none;
 }
