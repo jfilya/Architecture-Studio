@@ -64,8 +64,8 @@ function Header() {
               />
               <h2>Architecture Studio</h2>
               <div className={style.promo__middle_btn}>
-                <p><div></div> Next</p>
-                <p>Prev<div></div></p>
+                <p><span></span> Next</p>
+                <p>Prev<span></span></p>
               </div>
             </div>
           </div>
