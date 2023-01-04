@@ -1,0 +1,25 @@
+@mixin flex-container() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin hover-card() {
+  transition: 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 20px 35px #0000000f;
+    transform: translateY(-5px);
+  }
+}
+@mixin btn() {
+  width: 170px;
+  height: 45px;
+  background: #ffc94b;
+  @include flex-container();
+  justify-content: center;
+  font-family: "Playfair Display";
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #000000;
+}

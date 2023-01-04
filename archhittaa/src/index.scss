@@ -1,0 +1,94 @@
+@import "../src/template/colors.scss";
+@import "../src/template/mixin.scss";
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  font-weight: 400;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+  text-size-adjust: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+body,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $lightcolor;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  background: transparent; /*  прозрачность фона */
+  border: none;
+}
+.container {
+  max-width: 1753px;
+  padding: 0px 298px 0 17px;
+  margin: 0 auto;
+}
+h2 {
+  color: $lightcolor;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  position: relative;
+  z-index: 2;
+  max-width: 364px;
+  font-weight: 400;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 305px;
+    height: 3px;
+    background: $highlight;
+    top: 50%;
+    right: -56%;
+  }
+}
+
+.btn {
+  @include btn();
+}
+@media screen and (max-width: 1700px) {
+  .container {
+    padding: 0px 10px 0 10px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    padding: 0px 10px 0 10px;
+  }
+  h2 {
+    &::before {
+      width: 200px;
+      right: 0%;
+    }
+  }
+}

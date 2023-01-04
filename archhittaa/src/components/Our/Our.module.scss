@@ -1,0 +1,88 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.our {
+  top: -147px;
+  position: relative;
+  color: #fff;
+  &__background {
+    background: #fff;
+  }
+  &__block {
+    max-width: 1305px;
+    height: 656px;
+    background: $darkcolor;
+    position: relative;
+    z-index: 2;
+    padding: 116px 50px 0 0;
+    @include flex-container();
+    align-items: start;
+    img {
+      position: relative;
+      z-index: 3;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+  &__text {
+    padding: 104px 0 0 56px;
+    h2 {
+      left: -170px;
+      z-index: 4;
+      margin-bottom: 30px;
+    }
+    &_first {
+      color: $textcolor;
+      max-width: 600px;
+      margin-bottom: 30px;
+      span {
+        color: $highlight;
+        text-decoration: underline;
+      }
+    }
+    &_second {
+      font-family: "Playfair Display";
+      font-size: 28px;
+      line-height: 33px;
+      color: #6b6b6b;
+      line-height: 36px;
+      margin-bottom: 52px;
+    }
+  }
+}
+@media screen and (max-width: 1700px) {
+  .our {
+    background: #fff;
+    &__block {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1450px) {
+  .our {
+    &__block {
+      padding-top: 30px;
+      min-height: 656px;
+      height: fit-content;
+    }
+  }
+}
+@media screen and (max-width: 990px) {
+  .our {
+    &__block {
+      flex-direction: column-reverse;
+      padding: 30px 10px 0 10px;
+    }
+    img {
+      max-width: 400px;
+      width: 100%;
+      margin: 20px auto;
+    }
+    &__text{
+      padding: 0px;
+      h2{
+        left: 0px;
+      }
+      
+    }
+  }
+}

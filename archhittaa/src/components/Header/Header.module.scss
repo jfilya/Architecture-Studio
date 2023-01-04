@@ -1,9 +1,9 @@
-@font-face {
-  font-family: "Open Sans Condensed";
-  src: url("../../fonts/OpenSans_Condensed-Bold.ttf") format("opentype");
-}
+@import '../../template/fonts.scss';
+@import '../../template/mixin.scss';
+@import '../../template/colors.scss';
+
 .header {
-  background: #ffc94b;
+  background: $highlight;
   &__wrapper {
     padding-top: 71px;
     padding-bottom: 147px;
@@ -14,7 +14,7 @@
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-  color: #ffffff;
+  color: $lightcolor;
   position: relative;
   font-family: "Open Sans Condensed";
   position: relative;
@@ -24,26 +24,19 @@
     position: absolute;
     width: 355px;
     height: 0px;
-    border: 1px solid #ffc94b;
+    border: 1px solid $highlight;
     top: 44%;
     left: -264%;
   }
 }
-.container {
-  max-width: 1747px;
-  padding: 0px 298px 0 10px;
-  min-width: 320px;
-  margin: 0 auto;
-}
+
 .promo {
-  background: #0e1b1b;
+  background: $lightdarkcolor;
   border-radius: 50px 50px 0 0;
-  padding: 25px 62px 155px 135px;
+  padding: 25px 62px 158px 135px;
   nav {
     padding-bottom: 39px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-container();
   }
   &__social {
     padding-left: 5px;
@@ -56,14 +49,14 @@
   &__button {
     width: 50px;
     height: 50px;
-    background: #ffc94b;
+    background: $highlight;
     display: flex;
     justify-content: center;
     align-items: center;
     span {
       width: 2px;
       height: 31px;
-      background: #0e1b1b;
+      background: $lightdarkcolor;
       &:first-child {
         margin-right: 7px;
         margin-bottom: 6px;
@@ -76,18 +69,14 @@
   &__middle {
     position: relative;
     h2 {
-      color: #ffffff;
-      font-family: "Playfair Display";
-      font-size: 60px;
-      position: relative;
-      z-index: 1;
       padding: 153px 0px 83px 0px;
-      max-width: 364px;
-      font-weight: 400;
+      &::before{
+        display: none;
+      }
     }
     &_btn {
       p {
-        color: #ffc94b;
+        color: $highlight;
         font-size: 18px;
         display: flex;
         align-items: center;
@@ -103,7 +92,7 @@
           margin-top: 4px;
           width: 79px;
           height: 1px;
-          background: #ffc94b;
+          background: $highlight;
           &:first-child {
             margin-right: 11px;
           }
@@ -117,18 +106,19 @@
   &__image {
     position: absolute;
     right: 0px;
+    z-index: 1;
   }
 }
 .aside {
   position: absolute;
-  right: 5.5%;
+  right: 5%;
   top: 273px;
   transform: rotate(-90deg);
   .title {
     width: fit-content;
     font-size: 57.4545px;
     &::before {
-      border: 1px solid #0e1b1b;
+      border: 1px solid $lightdarkcolor;
       width: 637px;
       left: auto;
       right: 164px;
@@ -136,9 +126,6 @@
   }
 }
 @media screen and (max-width: 1700px) {
-  .container {
-    padding: 0px 10px 0 10px;
-  }
   .aside {
     display: none;
   }
