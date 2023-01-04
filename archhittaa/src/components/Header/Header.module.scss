@@ -1,6 +1,6 @@
-@import '../../template/fonts.scss';
-@import '../../template/mixin.scss';
-@import '../../template/colors.scss';
+@import "../../template/fonts.scss";
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
 
 .header {
   background: $highlight;
@@ -41,8 +41,19 @@
   &__social {
     padding-left: 5px;
     a {
+      svg {
+        transition: 0.5s;
+      }
       &:first-child {
         margin-right: 30px;
+      }
+      &:hover {
+        svg {
+          transform: scale(1.1);
+          path {
+            fill: $highlight;
+          }
+        }
       }
     }
   }
@@ -70,7 +81,7 @@
     position: relative;
     h2 {
       padding: 153px 0px 83px 0px;
-      &::before{
+      &::before {
         display: none;
       }
     }
@@ -80,6 +91,14 @@
         font-size: 18px;
         display: flex;
         align-items: center;
+        transition: 0.5s;
+        cursor:pointer;
+        &:hover {
+            color:$lightcolor;
+            span{
+             background:$lightcolor;
+            }
+          }
         &:first-child {
           padding-bottom: 33px;
           position: relative;
@@ -93,6 +112,7 @@
           width: 79px;
           height: 1px;
           background: $highlight;
+          transition: 0.5s;
           &:first-child {
             margin-right: 11px;
           }

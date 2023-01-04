@@ -22,4 +22,10 @@
   text-align: center;
   text-decoration-line: underline;
   color: #000000;
+  transition:0.5s;
+  &:hover{
+    background: transparent;
+    color:$lightcolor;
+    box-shadow: 0 0 10px 0 #ffc94b inset, 0 0 10px 4px #ffc94b;
+  }
 }
