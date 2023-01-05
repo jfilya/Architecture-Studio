@@ -7,7 +7,7 @@ function Our() {
           <div className={style.our__block}>
             <img src="images/our-img.jpg" alt="our-img" />
             <div className={style.our__text}>
-              <h2>Our DNA</h2>
+              <h2>Our&nbsp;DNA <span></span></h2>
               <p className={style.our__text_first}>
                 Amet eu facilisi posuere ut at cras non ipsum proin nunc purus
                 tellus ultricies velit elementum ut dui sed augue ultrices
