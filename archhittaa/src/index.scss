@@ -60,21 +60,26 @@ h2 {
   font-size: 60px;
   position: relative;
   z-index: 2;
-  max-width: 364px;
   font-weight: 400;
-  &::before {
-    content: "";
-    position: absolute;
+  @include flex-container();
+  span {
     width: 305px;
     height: 3px;
-    background: $highlight;
-    top: 50%;
-    right: -56%;
+    background: $lightdarkcolor;
   }
 }
-
+h3 {
+  font-family: "Playfair Display";
+  font-size: 48px;
+  line-height: 56px;
+}
 .btn {
   @include btn();
+}
+.btn_black {
+  &:hover {
+    color: $lightcolor;
+  }
 }
 @media screen and (max-width: 1700px) {
   .container {

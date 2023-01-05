@@ -3,9 +3,9 @@
 .our {
   top: -147px;
   position: relative;
-  color: #fff;
+  color: $lightcolor;
   &__background {
-    background: #fff;
+    background: $lightcolor;
   }
   &__block {
     max-width: 1305px;
@@ -29,6 +29,15 @@
       left: -170px;
       z-index: 4;
       margin-bottom: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 305px;
+        height: 3px;
+        top: 50%;
+        right: 12%;
+        background: $highlight;
+      }
     }
     &_first {
       color: $textcolor;
@@ -47,11 +56,12 @@
       line-height: 36px;
       margin-bottom: 52px;
     }
+
   }
 }
 @media screen and (max-width: 1700px) {
   .our {
-    background: #fff;
+    background: $lightcolor;
     &__block {
       max-width: 100%;
     }
@@ -77,12 +87,11 @@
       width: 100%;
       margin: 20px auto;
     }
-    &__text{
+    &__text {
       padding: 0px;
-      h2{
+      h2 {
         left: 0px;
       }
-      
     }
   }
 }

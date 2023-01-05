@@ -18,7 +18,7 @@ function Our() {
                 Amet eu facilisi posuere ut at cras non ipsum proin nunc purus
                 tellus ultricies velit{" "}
               </p>
-              <a className="btn" href="#">
+              <a className="btn btn_black" href="#">
                 Read More
               </a>
             </div>
