@@ -1,0 +1,127 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.footer {
+  color: $lightcolor;
+  padding-bottom: 76px;
+  &__block {
+    background: $lightdarkcolor;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    padding: 43px 52px 45px 15px;
+    @include flex-container();
+  }
+  &__first {
+    @include flex-container();
+    max-width: 387px;
+    width: 100%;
+  }
+  &__copyright {
+    transform: rotate(-90deg);
+    font-weight: 300;
+    position: relative;
+    left: -45px;
+    margin-right: 60px;
+  }
+  &__logo {
+    @include logo();
+    &::before {
+      width: 209px;
+      left: -146%;
+    }
+  }
+  &__line {
+    height: 86px;
+    width: 1px;
+    background: $lightcolor;
+  }
+  &__second {
+    @include flex-container();
+    padding-left: 43px;
+    width: 100%;
+    max-width: 990px;
+    li {
+      a {
+        @include flex-container();
+        font-size: 18px;
+        transition: 0.5s;
+        svg {
+          margin-right: 15px;
+          path {
+            transition: 0.5s;
+          }
+        }
+      }
+      &:hover {
+        a {
+          color: $highlight;
+          svg {
+            path {
+              fill: $highlight;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer {
+    &__second {
+      flex-direction: column;
+      li {
+        margin: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 940px) {
+  .footer {
+    &__block {
+      flex-direction: column;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__first {
+      margin-bottom: 20px;
+      flex-direction: column-reverse;
+    }
+    &__second {
+      padding-left: 0px;
+    }
+    &__line {
+      display: none;
+    }
+    &__copyright {
+      transform: rotate(0deg);
+      left: 0px;
+      margin-right: 0px;
+    }
+    &__logo {
+      margin-right: 0px;
+      margin-bottom: 20px;
+      &::before {
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+@media screen and (max-width: 940px) {
+  .footer {
+    &__second {
+      li {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 412px) {
+  .footer {
+    &__second {
+      align-items: flex-start;
+    }
+  }
+}

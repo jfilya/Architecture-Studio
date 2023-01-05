@@ -4,6 +4,7 @@ import Selected from "./components/Selected/Selected";
 import About from "./components/About/About";
 import Blogs from "./components/Blogs/Blogs";
 import Clients from "./components/Clients/Clients";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Blogs />
       <Clients />
+      <Footer />
     </div>
   );
 }

@@ -2,7 +2,7 @@
 @import "../../template/colors.scss";
 .clients {
   padding-top: 12px;
-  padding-bottom: 118px;
+  padding-bottom: 113px;
   &__container {
     @include flex-container();
     max-width: 1236px;
@@ -16,7 +16,7 @@
   }
   h2 {
     color: $lightdarkcolor;
-    max-width: 640px;
+    max-width: 632px;
     width: 100%;
     margin-right: 8px;
     span {
@@ -44,6 +44,7 @@
 }
 @media screen and (max-width: 550px) {
   .clients {
+    padding-bottom: 45px;
     &__container {
       padding-left: 0px;
     }

@@ -32,3 +32,21 @@
     text-decoration: underline;
   }
 }
+@mixin logo(){
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: $lightcolor;
+  position: relative;
+  font-family: "Open Sans Condensed";
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 355px;
+    height: 0px;
+    border: 1px solid $highlight;
+    top: 44%;
+    left: -264%;
+  }
+}
