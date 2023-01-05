@@ -12,7 +12,7 @@
 }
 .title {
   @include logo();
-  left:-53px;
+  left: -53px;
 }
 
 .promo {
@@ -72,41 +72,7 @@
       }
     }
     &_btn {
-      p {
-        color: $highlight;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        transition: 0.5s;
-        cursor: pointer;
-        &:hover {
-          color: $lightcolor;
-          span {
-            background: $lightcolor;
-          }
-        }
-        &:first-child {
-          padding-bottom: 33px;
-          position: relative;
-          left: -53px;
-        }
-        &:last-child {
-          padding-left: 12px;
-        }
-        span {
-          margin-top: 4px;
-          width: 79px;
-          height: 1px;
-          background: $highlight;
-          transition: 0.5s;
-          &:first-child {
-            margin-right: 11px;
-          }
-          &:last-child {
-            margin-left: 14px;
-          }
-        }
-      }
+      @include switch();
     }
   }
   &__image {

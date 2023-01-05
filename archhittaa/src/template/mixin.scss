@@ -1,5 +1,5 @@
- @import './colors.scss';
- @mixin flex-container() {
+@import "./colors.scss";
+@mixin flex-container() {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,13 +17,13 @@
   text-align: center;
   text-decoration-line: underline;
   color: #000000;
-  transition:0.5s;
-  &:hover{
+  transition: 0.5s;
+  &:hover {
     background: transparent;
     box-shadow: 0 0 10px 0 $highlight inset, 0 0 10px 4px $highlight;
   }
 }
-@mixin paragraph(){
+@mixin paragraph() {
   color: $textcolor;
   max-width: 600px;
   margin-bottom: 30px;
@@ -32,7 +32,7 @@
     text-decoration: underline;
   }
 }
-@mixin logo(){
+@mixin logo() {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -48,5 +48,42 @@
     border: 1px solid $highlight;
     top: 44%;
     left: -264%;
+  }
+}
+@mixin switch() {
+  p {
+    color: $highlight;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      color: $lightcolor;
+      span {
+        background: $lightcolor;
+      }
+    }
+    &:first-child {
+      padding-bottom: 33px;
+      position: relative;
+      left: -53px;
+    }
+    &:last-child {
+      padding-left: 12px;
+    }
+    span {
+      margin-top: 4px;
+      width: 79px;
+      height: 1px;
+      background: $highlight;
+      transition: 0.5s;
+      &:first-child {
+        margin-right: 11px;
+      }
+      &:last-child {
+        margin-left: 14px;
+      }
+    }
   }
 }
