@@ -93,13 +93,13 @@
         display: flex;
         align-items: center;
         transition: 0.5s;
-        cursor:pointer;
+        cursor: pointer;
         &:hover {
-            color:$lightcolor;
-            span{
-             background:$lightcolor;
-            }
+          color: $lightcolor;
+          span {
+            background: $lightcolor;
           }
+        }
         &:first-child {
           padding-bottom: 33px;
           position: relative;
@@ -152,6 +152,11 @@
   }
 }
 @media screen and (max-width: 1450px) {
+  .header {
+    &__wrapper {
+      padding-bottom: 0px;
+    }
+  }
   .promo {
     &__image {
       width: 900px;
@@ -160,7 +165,7 @@
 }
 @media screen and (max-width: 1290px) {
   .promo {
-    padding-bottom: 50px;
+    padding-bottom: 63px;
     padding-left: 62px;
     &__image {
       width: 700px;
@@ -175,6 +180,7 @@
 }
 @media screen and (max-width: 1080px) {
   .promo {
+    padding-bottom: 66px;
     &__image {
       width: 500px;
     }
@@ -187,6 +193,7 @@
 }
 @media screen and (max-width: 880px) {
   .promo {
+    padding-bottom: 67px;
     &__image {
       width: 400px;
     }
@@ -206,6 +213,7 @@
 }
 @media screen and (max-width: 700px) {
   .promo {
+    padding-bottom: 55px;
     padding-left: 20px;
     padding-right: 20px;
     &__image {
@@ -273,6 +281,7 @@
 }
 @media screen and (max-width: 420px) {
   .promo {
+    padding-bottom: 54px;
     &__image {
       width: 200px;
       top: 50px;
