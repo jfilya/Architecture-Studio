@@ -97,3 +97,17 @@ h3 {
     flex-direction: column-reverse;
   }
 }
+
+.img-animation{
+  animation: appearance-img 0.5s;
+}
+@keyframes appearance-img {
+  0%{
+    opacity:0;
+    transform: scale(0.5);
+  }
+  100%{
+    opacity:1;
+    transform: scale(1);
+  }
+}

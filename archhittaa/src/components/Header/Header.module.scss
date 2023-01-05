@@ -79,6 +79,18 @@
     position: absolute;
     right: 0px;
     z-index: 1;
+    &_item {
+      position: absolute;
+      z-index: 2;
+      bottom: -245px;
+      right: 10px;
+      font-weight: 300;
+      font-size: 180px;
+      line-height: 245px;
+      letter-spacing: -0.145em;
+      color: $lightcolor;
+      opacity: 0.5;
+    }
   }
 }
 .aside {

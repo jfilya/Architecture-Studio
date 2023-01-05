@@ -1,5 +1,23 @@
 import style from "./Header.module.scss";
+import React from "react";
 function Header() {
+  let [items, isItems] = React.useState(1);
+  const animationImg = () => {
+    const images = document.querySelector(".images-active");
+    images.classList.add("img-animation");
+    images.onanimationend = () => {
+      images.classList.remove("img-animation");
+    };
+  };
+  const renderItemsPlus = () => {
+    items < 5 ? isItems((items += 1)) : isItems(1);
+    animationImg();
+  };
+
+  const renderItemsMinus = () => {
+    items > 1 ? isItems((items -= 1)) : isItems(5);
+    animationImg();
+  };
   return (
     <header className={style.header}>
       <div className={style.header__wrapper}>
@@ -58,14 +76,19 @@ function Header() {
             </nav>
             <div className={style.promo__middle}>
               <img
-                className={style.promo__image}
-                src="images/header.jpg"
+                className={style.promo__image + " images-active"}
+                src={`images/header${items}.jpg`}
                 alt=""
               />
+              <span className={style.promo__image_item}>{`0${items}`}</span>
               <h2>Architecture Studio</h2>
               <div className={style.promo__middle_btn}>
-                <p><span></span> Next</p>
-                <p>Prev<span></span></p>
+                <p onClick={() => renderItemsPlus()}>
+                  <span></span> Next
+                </p>
+                <p onClick={renderItemsMinus}>
+                  Prev<span></span>
+                </p>
               </div>
             </div>
           </div>
