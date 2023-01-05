@@ -38,13 +38,7 @@
       }
     }
     &_first {
-      color: $textcolor;
-      max-width: 600px;
-      margin-bottom: 30px;
-      span {
-        color: $highlight;
-        text-decoration: underline;
-      }
+      @include paragraph();
     }
     &_second {
       font-family: "Playfair Display";

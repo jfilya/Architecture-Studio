@@ -3,7 +3,7 @@
 .selected {
   padding-top: 54px;
   color: $lightdarkcolor;
-  padding-bottom: 100px;
+  padding-bottom: 154px;
   h2 {
     color: $lightdarkcolor;
     max-width: 720px;
@@ -60,53 +60,68 @@
     }
   }
 }
-@media screen and (max-width:1550px) {
+@media screen and (max-width: 1550px) {
   .selected {
     &__block {
       padding-right: 0px;
     }
   }
 }
-@media screen and (max-width:1370px) {
+@media screen and (max-width: 1370px) {
   .selected {
+    padding-top: 0px;
+    padding-bottom: 60px;
     &__block {
       flex-direction: column;
       align-items: center;
     }
-    &__case{
+    &__case {
       width: 910px;
+    }
+    &__text{
+      max-width: 100%;
     }
   }
 }
-@media screen and (max-width:930px) {
+@media screen and (max-width: 930px) {
   .selected {
-    p{
+    p {
       margin-bottom: 0px;
     }
-    &__case{
+    &__case {
       width: 100%;
       flex-direction: column-reverse;
       align-items: center;
-      &_img2{
+      &_img2 {
         position: relative;
-        left:0px;
+        left: 0px;
         width: 100%;
         max-width: 400px;
       }
-      &_img1{
+      &_img1 {
         width: 100%;
         max-width: 400px;
         padding-top: 20px;
         padding-left: 0px;
         margin-right: 0px;
       }
-      &_btn{
+      &_btn {
         margin-bottom: 20px;
       }
     }
-    &__text{
+    &__text {
       padding-left: 0px;
       padding-top: 35px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .selected {
+    &__text {
+      h3 {
+        font-size: 35px;
+        padding: 0px;
+      }
     }
   }
 }
