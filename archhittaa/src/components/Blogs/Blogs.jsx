@@ -16,7 +16,7 @@ function Blogs() {
   ];
   return (
     <section className={style.blogs}>
-      <div className="container">
+      <div className={style.blogs__container +  " container"}>
         <div className={style.blogs__background}>
           <div className={style.blogs__block}>
             <h2>

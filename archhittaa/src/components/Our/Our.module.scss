@@ -76,6 +76,13 @@
     }
   }
 }
+@media screen and (max-width: 1330px) {
+  .our {
+    &__container {
+      padding: 0px;
+    }
+  }
+}
 @media screen and (max-width: 1070px) {
   .our {
     &__block {

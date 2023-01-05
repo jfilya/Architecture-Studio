@@ -2,7 +2,7 @@ import style from "./Our.module.scss";
 function Our() {
   return (
     <section className={style.our}>
-      <div className="container">
+      <div className={style.our__container + " container"} >
         <div className={style.our__background}>
           <div className={style.our__block}>
             <img src="images/our-img.jpg" alt="our-img" />
