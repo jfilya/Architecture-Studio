@@ -23,7 +23,7 @@ function Selected() {
               src="images/selected2.jpg"
               alt="selected2"
             />
-            <a href="#" className="btn">
+            <a href="#" className={style.selected__case_btn + ' btn'}>
               View Case
             </a>
           </div>

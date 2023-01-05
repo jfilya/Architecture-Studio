@@ -91,9 +91,11 @@ h3 {
     padding: 0px 10px 0 10px;
   }
   h2 {
-    &::before {
-      width: 200px;
-      right: 0%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    span{
+      width: 100%;
     }
   }
 }

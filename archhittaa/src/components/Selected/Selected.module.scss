@@ -60,3 +60,53 @@
     }
   }
 }
+@media screen and (max-width:1550px) {
+  .selected {
+    &__block {
+      padding-right: 0px;
+    }
+  }
+}
+@media screen and (max-width:1370px) {
+  .selected {
+    &__block {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__case{
+      width: 910px;
+    }
+  }
+}
+@media screen and (max-width:930px) {
+  .selected {
+    p{
+      margin-bottom: 0px;
+    }
+    &__case{
+      width: 100%;
+      flex-direction: column-reverse;
+      align-items: center;
+      &_img2{
+        position: relative;
+        left:0px;
+        width: 100%;
+        max-width: 400px;
+      }
+      &_img1{
+        width: 100%;
+        max-width: 400px;
+        padding-top: 20px;
+        padding-left: 0px;
+        margin-right: 0px;
+      }
+      &_btn{
+        margin-bottom: 20px;
+      }
+    }
+    &__text{
+      padding-left: 0px;
+      padding-top: 35px;
+    }
+  }
+}
