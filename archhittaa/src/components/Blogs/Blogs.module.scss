@@ -100,11 +100,19 @@
 }
 @media screen and (max-width: 890px) {
   .blogs {
-    &__container{
-        padding:0px;
+    padding-bottom: 0px;
+    &__container {
+      padding: 0px;
+    }
+    &__background {
+      flex-direction: column;
+    }
+    &__block {
+      height: 255px;
     }
     &__items {
       flex-direction: column;
+      position: relative;
     }
     &__item {
       max-width: 100%;

@@ -1,0 +1,62 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.clients {
+  padding-top: 12px;
+  padding-bottom: 118px;
+  &__container {
+    @include flex-container();
+    max-width: 1236px;
+    margin: 0 auto;
+    padding-left: 10px;
+  }
+  &__list {
+    @include flex-container();
+    padding-top: 3px;
+    width: 530px;
+  }
+  h2 {
+    color: $lightdarkcolor;
+    max-width: 640px;
+    width: 100%;
+    margin-right: 8px;
+    span {
+      margin-left: 15px;
+      width: 305px;
+    }
+  }
+}
+@media screen and (max-width: 1240px) {
+  .clients {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__list {
+      width: 100%;
+      max-width: 530px;
+    }
+    h2 {
+      margin-bottom: 15px;
+      span {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .clients {
+    &__container {
+      padding-left: 0px;
+    }
+    h2 {
+      flex-direction: column;
+    }
+    &__list {
+      li {
+        width: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

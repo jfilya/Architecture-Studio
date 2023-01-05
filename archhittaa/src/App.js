@@ -3,6 +3,7 @@ import Our from "./components/Our/Our";
 import Selected from "./components/Selected/Selected";
 import About from "./components/About/About";
 import Blogs from "./components/Blogs/Blogs";
+import Clients from "./components/Clients/Clients";
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
       <Selected />
       <About />
       <Blogs />
+      <Clients />
     </div>
   );
 }
