@@ -1,0 +1,69 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.blogs {
+  padding-bottom: 270px;
+  &__background {
+    @include flex-container();
+    justify-content: start;
+    padding-right: 140px;
+    position: relative;
+  }
+  &__block {
+    max-width: 1236px;
+    width: 100%;
+    height: 445px;
+    background: $darkcolor;
+    position: relative;
+    padding-top: 45px;
+    h2 {
+      max-width: 642px;
+      margin-bottom: 62px;
+      span {
+        background: $lightcolor;
+        max-width: 268px;
+      }
+    }
+  }
+  &__items {
+    @include flex-container();
+    max-width: 1168px;
+    width: 100%;
+    position: absolute;
+    top: 188px;
+    left: 135px;
+  }
+  &__item {
+    max-width: 370px;
+    height: 448px;
+    position: relative;
+    @include flex-container();
+    flex-direction: column;
+    span {
+      position: absolute;
+      top: 24px;
+      left: 17px;
+      width: 73px;
+      height: 26px;
+      background: $highlight;
+      font-size: 14px;
+      line-height: 19px;
+      color: #000000;
+      @include flex-container();
+      justify-content: center;
+    }
+    p {
+      position: relative;
+      top: -58px;
+      z-index: 2;
+      width: 336px;
+      height: 97px;
+      background: $lightdarkcolor;
+      color: $lightcolor;
+      padding: 17px;
+      text-align: center;
+      font-family: "Playfair Display";
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+}
