@@ -2,24 +2,24 @@ import style from "./Header.module.scss";
 import React from "react";
 function Header() {
   let [items, isItems] = React.useState(1);
-  const animationImg = () => {
+  const animationImg = (transitionAnimation) => {
     const images = document.querySelector(".images-active");
     const switchBtn = document.querySelectorAll('.switch');
     switchBtn.forEach(s => s.disabled = true)
-    images.classList.add("img-animation");
+    images.classList.add(transitionAnimation);
     images.onanimationend = () => {
-      images.classList.remove("img-animation");
+      images.classList.remove(transitionAnimation);
       switchBtn.forEach(s => s.disabled = false)
     };
   };
   const renderItemsPlus = () => {
     items < 5 ? isItems((items += 1)) : isItems(1);
-    animationImg();
+    animationImg('transition-right');
   };
 
   const renderItemsMinus = () => {
     items > 1 ? isItems((items -= 1)) : isItems(5);
-    animationImg();
+    animationImg('transition-left');
   };
   return (
     <header className={style.header}>
