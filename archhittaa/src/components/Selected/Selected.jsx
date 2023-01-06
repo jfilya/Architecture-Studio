@@ -36,12 +36,12 @@ function Selected() {
               sit venenatis
             </p>
             <div className={style.selected__btn}>
-              <p>
+              <button>
                 <span></span> Next
-              </p>
-              <p>
+              </button>
+              <button>
                 Prev<span></span>
-              </p>
+              </button>
             </div>
           </div>
         </div>

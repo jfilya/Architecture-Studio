@@ -51,7 +51,7 @@
   }
 }
 @mixin switch() {
-  p {
+  button {
     color: $highlight;
     font-size: 18px;
     display: flex;

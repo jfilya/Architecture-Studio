@@ -83,12 +83,12 @@ function Header() {
               <span className={style.promo__image_item}>{`0${items}`}</span>
               <h2>Architecture Studio</h2>
               <div className={style.promo__middle_btn}>
-                <p onClick={() => renderItemsPlus()}>
+                <button onClick={() => renderItemsPlus()}>
                   <span></span> Next
-                </p>
-                <p onClick={renderItemsMinus}>
+                </button>
+                <button onClick={renderItemsMinus}>
                   Prev<span></span>
-                </p>
+                </button>
               </div>
             </div>
           </div>

@@ -63,7 +63,9 @@
     @include switch();
     position: relative;
     bottom: -56px;
-    p {
+    display: flex;
+    flex-direction: column;
+    button {
       color: $lightdarkcolor;
       display: flex;
       justify-content: end;
@@ -87,10 +89,10 @@
     }
   }
 }
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1720px) {
   .selected {
     &__block {
-      padding-right: 0px;
+      padding-right: 30px;
     }
   }
 }
@@ -98,6 +100,7 @@
   .selected {
     padding-bottom: 60px;
     &__block {
+      padding-right: 0px;
       flex-direction: column-reverse;
       align-items: center;
     }
@@ -110,7 +113,7 @@
     &__btn {
       bottom: 0px;
       margin-bottom: 25px;
-      p {
+      button {
         justify-content: start;
         &:first-child {
           left: 0px;
@@ -126,7 +129,7 @@
   .selected {
     &__btn {
       padding-top:30px;
-      p {
+      button {
         justify-content: center;
       }
     }
