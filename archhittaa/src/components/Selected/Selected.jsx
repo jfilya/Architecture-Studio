@@ -71,7 +71,7 @@ function Selected() {
   };
 
   const renderObjMinus = () => {
-    obj > 1 ? isObj((obj -= 1)) : isObj(3);
+    obj > 0 ? isObj((obj -= 1)) : isObj(3);
     animationBlocks(
       "transition-right",
       "transition-right2",
@@ -120,6 +120,14 @@ function Selected() {
             </div>
           </div>
         </div>
+      </div>
+      <div style={{ display: "none" }}>
+        {objAnimationElements.map((el) => (
+          <>
+            <img src={el.img1} alt="img" />
+            <img src={el.img2} alt="img" />
+          </>
+        ))}
       </div>
     </section>
   );

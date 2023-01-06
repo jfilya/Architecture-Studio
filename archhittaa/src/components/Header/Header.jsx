@@ -1,25 +1,26 @@
 import style from "./Header.module.scss";
 import React from "react";
 function Header() {
+  const arrayImg = [1,2,3,4,5]
   let [items, isItems] = React.useState(1);
   const animationImg = (transitionAnimation) => {
     const images = document.querySelector(".images-active");
-    const switchBtn = document.querySelectorAll('.switch');
-    switchBtn.forEach(s => s.disabled = true)
+    const switchBtn = document.querySelectorAll(".switch");
+    switchBtn.forEach((s) => (s.disabled = true));
     images.classList.add(transitionAnimation);
     images.onanimationend = () => {
       images.classList.remove(transitionAnimation);
-      switchBtn.forEach(s => s.disabled = false)
+      switchBtn.forEach((s) => (s.disabled = false));
     };
   };
   const renderItemsPlus = () => {
     items < 5 ? isItems((items += 1)) : isItems(1);
-    animationImg('transition-top');
+    animationImg("transition-top");
   };
 
   const renderItemsMinus = () => {
     items > 1 ? isItems((items -= 1)) : isItems(5);
-    animationImg('transition-bottom');
+    animationImg("transition-bottom");
   };
   return (
     <header className={style.header}>
@@ -99,6 +100,13 @@ function Header() {
         <aside className={style.aside}>
           <p className={style.title}>ARCHITAA</p>
         </aside>
+      </div>
+      <div style={{ display: "none" }}>
+        {
+          arrayImg.map(num => (
+            <img src={`images/header${num}.jpg`} alt="header-img" />
+          ))
+        }
       </div>
     </header>
   );
