@@ -8,6 +8,7 @@ body {
   min-width: 320px;
   font-weight: 400;
   font-size: 16px;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -119,6 +120,41 @@ h3 {
     top: 0px;
   }
 }
+
+@keyframes move-right {
+  0% {
+    opacity: 0;
+    right: -335px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+@keyframes move-right2 {
+  0% {
+    opacity: 0;
+    left: 0px;
+  }
+  100% {
+    opacity: 1;
+    left: 335px;
+  }
+}
+@keyframes move-right3 {
+  0% {
+    opacity: 0;
+    left: -335px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+.opacity-block {
+  opacity: 0;
+}
 .transition-top {
   animation-name: move-top;
   animation-duration: 0.5s;
@@ -126,6 +162,30 @@ h3 {
 .transition-bottom {
   animation-name: move-bottom;
   animation-duration: 0.5s;
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 0.3s;
+}
+.transition-right2 {
+  animation-name: move-right2;
+  animation-duration: 0.3s;
+}
+.transition-right3 {
+  animation-name: move-right3;
+  animation-duration: 0.3s;
+}
+@media screen and (max-width: 930px) {
+  @keyframes move-right2 {
+    0% {
+      opacity: 0;
+      left: -335px;
+    }
+    100% {
+      opacity: 1;
+      left: 0px;
+    }
+  }
 }
 @media screen and (max-width: 420px) {
   @keyframes move-top {

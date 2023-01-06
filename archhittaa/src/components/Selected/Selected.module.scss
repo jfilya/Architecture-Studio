@@ -1,7 +1,7 @@
 @import "../../template/mixin.scss";
 @import "../../template/colors.scss";
 .selected {
-  padding-top: 54px;
+  padding-top: 60px;
   color: $lightdarkcolor;
   padding-bottom: 154px;
   h2 {
@@ -20,6 +20,7 @@
     @include flex-container();
     padding-right: 95px;
     align-items: start;
+    overflow: hidden;
   }
   &__case {
     padding-top: 58px;
@@ -50,13 +51,17 @@
     padding-left: 13px;
     max-width: 418px;
     padding-top: 80px;
+    position: relative;
     h3 {
       padding-right: 19px;
       margin-bottom: 37px;
       text-align: center;
+      position: relative;
     }
     p {
+      position: relative;
       line-height: 22px;
+      height: 88px;
     }
   }
   &__btn {
@@ -141,6 +146,7 @@
       flex-direction: column;
       align-items: center;
       padding-top: 0px;
+
       &_img2 {
         position: relative;
         left: 0px;
