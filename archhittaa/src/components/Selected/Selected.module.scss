@@ -3,7 +3,6 @@
 .selected {
   padding-top: 60px;
   color: $lightdarkcolor;
-  padding-bottom: 154px;
   h2 {
     color: $lightdarkcolor;
     max-width: 720px;
@@ -21,6 +20,7 @@
     padding-right: 95px;
     align-items: start;
     overflow: hidden;
+    padding-bottom: 154px;
   }
   &__case {
     padding-top: 58px;
