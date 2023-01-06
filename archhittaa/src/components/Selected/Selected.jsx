@@ -28,7 +28,11 @@ function Selected() {
     },
   ];
   let [obj, isObj] = React.useState(0);
-  const animationBlocks = (transitionAnimation,transitionAnimation2, transitionAnimation3) => {
+  const animationBlocks = (
+    transitionAnimation,
+    transitionAnimation2,
+    transitionAnimation3
+  ) => {
     const blockImg1 = document.querySelector(".images1");
     const blockImg2 = document.querySelector(".images2");
     const titleElement = document.querySelector(".title-element");
@@ -36,35 +40,43 @@ function Selected() {
     const switchBtn = document.querySelectorAll(".switch");
     switchBtn.forEach((s) => (s.disabled = true));
     titleElement.classList.add(transitionAnimation);
-    textElement.classList.add('opacity-block');
+    textElement.classList.add("opacity-block");
     blockImg1.classList.add(transitionAnimation);
-    blockImg2.classList.add('opacity-block');
+    blockImg2.classList.add("opacity-block");
     titleElement.onanimationend = () => {
       titleElement.classList.remove(transitionAnimation);
-      textElement.classList.remove('opacity-block');
+      textElement.classList.remove("opacity-block");
       textElement.classList.add(transitionAnimation3);
       textElement.onanimationend = () => {
         textElement.classList.remove(transitionAnimation3);
         switchBtn.forEach((s) => (s.disabled = false));
-      }
+      };
     };
     blockImg1.onanimationend = () => {
       blockImg1.classList.remove(transitionAnimation);
-      blockImg2.classList.remove('opacity-block');
+      blockImg2.classList.remove("opacity-block");
       blockImg2.classList.add(transitionAnimation2);
       blockImg2.onanimationend = () => {
         blockImg2.classList.remove(transitionAnimation2);
-      }
+      };
     };
   };
   const renderObjPlus = () => {
     obj < 3 ? isObj((obj += 1)) : isObj(0);
-    animationBlocks('transition-right', 'transition-right2', 'transition-right3');
+    animationBlocks(
+      "transition-right",
+      "transition-right2",
+      "transition-right3"
+    );
   };
 
   const renderObjMinus = () => {
     obj > 1 ? isObj((obj -= 1)) : isObj(3);
-    animationBlocks('transition-right', 'transition-right2', 'transition-right3');
+    animationBlocks(
+      "transition-right",
+      "transition-right2",
+      "transition-right3"
+    );
   };
 
   return (
@@ -80,6 +92,7 @@ function Selected() {
         </p>
         <div className={style.selected__block}>
           <div className={style.selected__case}>
+            <span className={style.selected__case_item}>{`0${obj + 1}`}</span>
             <img
               className={style.selected__case_img1 + " images1"}
               src={objAnimationElements[obj].img1}

@@ -28,6 +28,16 @@
     justify-content: flex-start;
     align-items: flex-end;
     position: relative;
+    &_item {
+      @include item-number();
+      z-index: 3;
+      top: -30px;
+      color: $lightdarkcolor;
+      opacity: 0.1;
+      left: 164px;
+      font-size: 120px;
+      line-height: 163px;
+    }
     &_img1 {
       display: inline-flex;
       padding-left: 29px;
@@ -109,6 +119,9 @@
       flex-direction: column-reverse;
       align-items: center;
     }
+    p {
+      margin-bottom: 0px;
+    }
     &__case {
       width: 910px;
     }
@@ -133,7 +146,7 @@
 @media screen and (max-width: 930px) {
   .selected {
     &__btn {
-      padding-top:30px;
+      padding-top: 30px;
       button {
         justify-content: center;
       }
@@ -146,7 +159,10 @@
       flex-direction: column;
       align-items: center;
       padding-top: 0px;
-
+      &_item {
+        top: -154px;
+        left: 0;
+      }
       &_img2 {
         position: relative;
         left: 0px;
@@ -176,6 +192,20 @@
       h3 {
         font-size: 35px;
         padding: 0px;
+      }
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    &__case {
+      &_item {
+        top: -140px;
+        font-size: 80px;
+      }
+    }
+    &__btn {
+      button {
+        justify-content: flex-end;
       }
     }
   }

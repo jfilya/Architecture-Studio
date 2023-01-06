@@ -80,16 +80,10 @@
     right: 0px;
     z-index: 1;
     &_item {
-      position: absolute;
-      z-index: 2;
+      @include item-number();
       bottom: -245px;
       right: 10px;
-      font-weight: 300;
-      font-size: 180px;
-      line-height: 245px;
       letter-spacing: -0.145em;
-      color: $lightcolor;
-      opacity: 0.5;
     }
   }
 }
@@ -140,7 +134,7 @@
     &__image {
       width: 700px;
       &_item {
-        top:0;
+        top: 0;
         font-size: 100px;
       }
     }
@@ -219,7 +213,7 @@
     &__image {
       width: 280px;
       &_item {
-        top:0;
+        top: 0;
         font-size: 50px;
       }
     }
@@ -277,7 +271,7 @@
   }
   @keyframes move-right {
     0% {
-      opacity:0;
+      opacity: 0;
       top: -100px;
     }
     100% {
@@ -285,10 +279,10 @@
       top: 50px;
     }
   }
-  
+
   @keyframes move-left {
     0% {
-      opacity:0;
+      opacity: 0;
       top: 100px;
     }
     100% {
