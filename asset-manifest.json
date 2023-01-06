@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Architecture-Studio/static/css/main.87f6ec5d.css",
+    "main.js": "/Architecture-Studio/static/js/main.83f12366.js",
+    "static/media/OpenSans_Condensed-Bold.ttf": "/Architecture-Studio/static/media/OpenSans_Condensed-Bold.3e0e7a165bf2cf3af3c1.ttf",
+    "index.html": "/Architecture-Studio/index.html",
+    "main.87f6ec5d.css.map": "/Architecture-Studio/static/css/main.87f6ec5d.css.map",
+    "main.83f12366.js.map": "/Architecture-Studio/static/js/main.83f12366.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87f6ec5d.css",
+    "static/js/main.83f12366.js"
+  ]
+}
