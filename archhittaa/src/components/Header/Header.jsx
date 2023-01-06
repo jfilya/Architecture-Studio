@@ -4,9 +4,12 @@ function Header() {
   let [items, isItems] = React.useState(1);
   const animationImg = () => {
     const images = document.querySelector(".images-active");
+    const switchBtn = document.querySelectorAll('.switch');
+    switchBtn.forEach(s => s.disabled = true)
     images.classList.add("img-animation");
     images.onanimationend = () => {
       images.classList.remove("img-animation");
+      switchBtn.forEach(s => s.disabled = false)
     };
   };
   const renderItemsPlus = () => {
@@ -83,10 +86,10 @@ function Header() {
               <span className={style.promo__image_item}>{`0${items}`}</span>
               <h2>Architecture Studio</h2>
               <div className={style.promo__middle_btn}>
-                <button onClick={() => renderItemsPlus()}>
+                <button className="switch" onClick={() => renderItemsPlus()}>
                   <span></span> Next
                 </button>
-                <button onClick={renderItemsMinus}>
+                <button className="switch" onClick={renderItemsMinus}>
                   Prev<span></span>
                 </button>
               </div>
