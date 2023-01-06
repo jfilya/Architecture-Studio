@@ -113,6 +113,13 @@
   .aside {
     display: none;
   }
+  .promo {
+    &__image {
+      &_item {
+        z-index: 4;
+      }
+    }
+  }
 }
 @media screen and (max-width: 1450px) {
   .header {
@@ -132,6 +139,10 @@
     padding-left: 62px;
     &__image {
       width: 700px;
+      &_item {
+        top:0;
+        font-size: 100px;
+      }
     }
   }
   .title {
@@ -188,7 +199,7 @@
         padding-bottom: 35px;
       }
       &_btn {
-        p {
+        button {
           span {
             width: 30px;
           }
@@ -207,6 +218,10 @@
   .promo {
     &__image {
       width: 280px;
+      &_item {
+        top:0;
+        font-size: 50px;
+      }
     }
     &__middle {
       h2 {
@@ -215,9 +230,9 @@
         padding-bottom: 18px;
       }
       &_btn {
-        p {
+        button {
           &:first-child {
-            padding-bottom: 10px;
+            padding-bottom: 31px;
           }
           &:last-child {
             padding-left: 0px;
@@ -258,6 +273,27 @@
           margin-right: 15px;
         }
       }
+    }
+  }
+  @keyframes move-right {
+    0% {
+      opacity:0;
+      top: -100px;
+    }
+    100% {
+      opacity: 1;
+      top: 50px;
+    }
+  }
+  
+  @keyframes move-left {
+    0% {
+      opacity:0;
+      top: 100px;
+    }
+    100% {
+      opacity: 1;
+      top: 50px;
     }
   }
 }

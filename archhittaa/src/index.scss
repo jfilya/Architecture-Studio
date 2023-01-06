@@ -98,9 +98,9 @@ h3 {
   }
 }
 
-@keyframes move-right {
+@keyframes move-top {
   0% {
-    opacity:0;
+    opacity: 0;
     top: -100px;
   }
   100% {
@@ -109,9 +109,9 @@ h3 {
   }
 }
 
-@keyframes move-left {
+@keyframes move-bottom {
   0% {
-    opacity:0;
+    opacity: 0;
     top: 100px;
   }
   100% {
@@ -119,11 +119,34 @@ h3 {
     top: 0px;
   }
 }
-.transition-right {
-  animation-name: move-right;
+.transition-top {
+  animation-name: move-top;
   animation-duration: 0.5s;
 }
-.transition-left {
-  animation-name: move-left;
+.transition-bottom {
+  animation-name: move-bottom;
   animation-duration: 0.5s;
+}
+@media screen and (max-width: 420px) {
+  @keyframes move-top {
+    0% {
+      opacity: 0;
+      top: -100px;
+    }
+    100% {
+      opacity: 1;
+      top: 50px;
+    }
+  }
+
+  @keyframes move-bottom {
+    0% {
+      opacity: 0;
+      top: 100px;
+    }
+    100% {
+      opacity: 1;
+      top: 50px;
+    }
+  }
 }

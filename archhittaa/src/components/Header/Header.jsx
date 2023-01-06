@@ -14,12 +14,12 @@ function Header() {
   };
   const renderItemsPlus = () => {
     items < 5 ? isItems((items += 1)) : isItems(1);
-    animationImg('transition-right');
+    animationImg('transition-top');
   };
 
   const renderItemsMinus = () => {
     items > 1 ? isItems((items -= 1)) : isItems(5);
-    animationImg('transition-left');
+    animationImg('transition-bottom');
   };
   return (
     <header className={style.header}>
